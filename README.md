@@ -4,22 +4,17 @@ A fast-paced neon-themed driving game where you navigate city traffic and rack u
 
 ## 🚀 Quick Start
 
-### Option 1: One Command (Easiest)
+Just copy and paste this into your terminal:
+
 ```bash
-npm install && npm start
+git clone https://github.com/67GOATdevs/Street-Legends.git && cd Street-Legends && npm install && npm start
 ```
-Then open: **http://localhost:3000**
 
-### Option 2: Step by Step
-```bash
-# 1. Install dependencies
-npm install
+Then open your browser to: **http://localhost:3000**
 
-# 2. Start the server
-npm start
+That's it! 🎮
 
-# 3. Open your browser to http://localhost:3000
-```
+---
 
 ## 🎮 How to Play
 
@@ -62,4 +57,4 @@ GNU General Public License v3.0
 
 ---
 
-**Ready to play?** Run `npm start` and hit the road! 🚗💨
+**Ready to play?** Copy the command above and let's go! 🚗💨
