@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Legends</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <div class="hud-item">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud-item">
+          <span class="label">Best</span>
+          <strong id="best">0</strong>
+        </div>
+        <div class="hud-item">
+          <span class="label">Speed</span>
+          <strong id="speed">0</strong>
+        </div>
+      </header>
+
+      <canvas id="gameCanvas" width="900" height="540" aria-label="Street Legends driving game"></canvas>
+
+      <div id="overlay" class="overlay visible">
+        <div class="panel">
+          <p class="eyebrow">NEON RUSH</p>
+          <h1>Street Legends</h1>
+          <p>Thread the city traffic and survive the night ride.</p>
+          <div class="controls">
+            <span>Steer: A / D or ← / →</span>
+            <span>Boost: W / ↑</span>
+            <span>Brake: S / ↓</span>
+          </div>
+          <button id="startButton" type="button">Start Ride</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

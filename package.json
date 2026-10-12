@@ -1,0 +1,9 @@
+{
+  "name": "street-legends",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Street Legends - a browser-based driving game",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

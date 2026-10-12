@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050816;
+  --panel: rgba(10, 15, 30, 0.75);
+  --line: rgba(255, 255, 255, 0.18);
+  --road: #1a1d2d;
+  --road-edge: #e6f1ff;
+  --player: #38bdf8;
+  --player-dark: #2563eb;
+  --traffic: #ef4444;
+  --traffic-2: #f59e0b;
+  --pickup: #22c55e;
+  --text: #edf6ff;
+  --highlight: #7dd3fc;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.28), transparent 25%),
+    linear-gradient(160deg, #020611 0%, #0a1227 45%, #050816 100%);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-shell {
+  position: relative;
+  width: min(92vw, 960px);
+  padding: 18px 18px 12px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  border-radius: 22px;
+  background: rgba(7, 10, 20, 0.8);
+  box-shadow: 0 30px 80px rgba(14, 165, 233, 0.2);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+.hud-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 110px;
+}
+
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(237, 246, 255, 0.7);
+}
+
+.hud strong {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #0f172a 0%, #091421 65%, #050d18 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(2, 6, 23, 0.52);
+  border-radius: 22px;
+}
+
+.overlay.visible {
+  display: grid;
+}
+
+.panel {
+  width: min(420px, 82%);
+  padding: 28px 22px 26px;
+  border-radius: 18px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  background: rgba(15, 23, 42, 0.92);
+  text-align: center;
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.6);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--highlight);
+  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  line-height: 1;
+}
+
+.panel p {
+  margin: 0 0 18px;
+  color: rgba(237, 246, 255, 0.8);
+}
+
+.controls {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 22px;
+  font-size: 0.92rem;
+  color: rgba(191, 219, 254, 0.9);
+}
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.5);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
